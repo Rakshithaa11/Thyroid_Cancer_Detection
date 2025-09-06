@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block body_class %}doctor-dashboard-bg{% endblock %}
+
+{% block title %}Doctor Dashboard - ThyroidAI{% endblock %}
+
+{% block content %}
+<section class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold text-purple">Welcome, Dr. {{ username }}</h1>
+    </div>
+
+    <div class="row g-4">
+        <!-- Patient Records -->
+        <div class="col-12 col-md-3">
+            <div class="card text-center shadow-sm h-100">
+                <div class="card-body">
+                    <div class="display-6 mb-3">📋</div>
+                    <h5 class="card-title">Patient Records</h5>
+                    <p class="card-text">Review patient details and medical history.</p>
+                    <a href="{{ url_for('view_patients') }}" class="btn btn-outline-primary w-100">
+                        View Patients
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Appointments -->
+        <div class="col-12 col-md-3">
+            <div class="card text-center shadow-sm h-100">
+                <div class="card-body">
+                    <div class="display-6 mb-3">📆</div>
+                    <h5 class="card-title">Appointments</h5>
+                    <p class="card-text">Manage your daily schedule with ease.</p>
+                    <a href="{{ url_for('view_appointments') }}" class="btn btn-outline-success w-100">
+                        Manage
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ThyroCheck -->
+        <div class="col-12 col-md-3">
+            <div class="card text-center shadow-sm h-100">
+                <div class="card-body">
+                    <div class="display-6 mb-3">🤖</div>
+                    <h5 class="card-title">ThyroCheck</h5>
+                    <p class="card-text">Get insights from ThyroidAI’s diagnostic system.</p>
+                    <a href="{{ url_for('thyrocheck') }}" class="btn btn-outline-warning w-100">
+                        ThyroCheck
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doctors -->
+        <div class="col-12 col-md-3">
+            <div class="card text-center shadow-sm h-100">
+                <div class="card-body">
+                    <div class="display-6 mb-3">👨‍⚕️</div>
+                    <h5 class="card-title">Doctors</h5>
+                    <p class="card-text">View and manage registered doctors.</p>
+                    <a href="{{ url_for('view_doctors') }}" class="btn btn-outline-info w-100">
+                        View Doctors
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

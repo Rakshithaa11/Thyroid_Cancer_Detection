@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - ThyroidAI{% endblock %}
+
+{% block content %}
+<section class="bg-primary text-white text-center d-flex align-items-center justify-content-center" style="min-height: 90vh;">
+  <div class="container">
+    <h1 class="display-4 fw-bold mb-3">Your Health, Our Priority</h1>
+    <p class="lead mb-4">
+      ThyroidAI connects you with AI-powered thyroid cancer detection and doctors for early consultation and personalized care.
+    </p>
+    <a href="{{ url_for('register') }}" class="btn btn-success btn-lg fw-bold shadow">Get Started</a>
+  </div>
+</section>
+{% endblock %}

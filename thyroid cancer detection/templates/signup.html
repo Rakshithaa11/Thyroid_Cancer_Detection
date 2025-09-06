@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup</title>
+</head>
+<body>
+  <h2>Signup</h2>
+  <form method="POST" action="{{ url_for('signup') }}">
+      <label>Username</label><br>
+      <input type="text" name="username" required><br><br>
+
+      <label>Email</label><br>
+      <input type="email" name="email" required><br><br>
+
+      <label>Password</label><br>
+      <input type="password" name="password" required><br><br>
+
+      <label>Role</label><br>
+      <select name="role">
+          <option value="patient">Patient</option>
+          <option value="doctor">Doctor</option>
+      </select><br><br>
+
+      <button type="submit">Register</button>
+  </form>
+</body>
+</html>

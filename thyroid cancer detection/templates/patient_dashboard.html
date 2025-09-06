@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Patient Dashboard - ThyroidAI{% endblock %}
+
+{% block content %}
+<section class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold text-primary">Welcome, {{ username }}</h1>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-12 col-md-4">
+            <div class="card text-center shadow-sm h-100">
+                <div class="card-body">
+                    <div class="display-6 mb-3">📁</div>
+                    <h5 class="card-title">My Reports</h5>
+                    <p class="card-text">Access your test results and AI predictions.</p>
+                    <a href="#" class="btn btn-outline-primary w-100">View Reports</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="card text-center shadow-sm h-100">
+                <div class="card-body">
+                    <div class="display-6 mb-3">📅</div>
+                    <h5 class="card-title">Book Appointment</h5>
+                    <p class="card-text">Schedule a visit with your thyroid specialist.</p>
+                    <a href="#" class="btn btn-outline-success w-100">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="card text-center shadow-sm h-100">
+                <div class="card-body">
+                    <div class="display-6 mb-3">📈</div>
+                    <h5 class="card-title">Health Tracker</h5>
+                    <p class="card-text">Track your health and progress over time.</p>
+                    <a href="#" class="btn btn-outline-warning w-100">Track</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

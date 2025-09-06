@@ -1,0 +1,134 @@
+/* Global Brand Styling */
+body, html {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    background-color: #f0ebf8;
+    color: #8e44ad !important;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: #8e44ad;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #732d91;
+}
+
+.btn-success {
+    background-color: #00b894;
+    border: none;
+}
+.btn-success:hover {
+    background-color: #009d7f;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.form-control:focus {
+    border-color: #8e44ad;
+    box-shadow: 0 0 0 0.2rem rgba(142,68,173,0.2);
+}
+
+.alert {
+    margin-top: 1rem;
+}
+.card-title {
+    font-weight: 600;
+}
+.card-text {
+    font-size: 0.95rem;
+}
+
+@media (max-width: 576px) {
+    .card .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+/* --------------------------------------------------
+   Custom Backgrounds
+--------------------------------------------------  */
+
+/* 🔹 Doctor Dashboard background */
+body.doctor-dashboard-bg {
+    background-image: url("/static/doctor_dashboard.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden; /* ensures pseudo-element stays inside */
+}
+
+body.doctor-dashboard-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/static/doctor_dashboard.png") no-repeat center center;
+    background-size: cover;
+    filter: blur(6px);   /* 🔹 controls blur strength */
+    transform: scale(1.05); /* prevents edge clipping */
+    z-index: -2; /* keep it behind content */
+}
+
+body.doctor-dashboard-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4); /* overlay for readability */
+    z-index: -1;
+}
+
+/* 🔹 Thyroid Predictions background */
+body.thyroid-prediction-bg {
+    background-image: url("/static/thyrocheck.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+}
+
+body.thyroid-prediction-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.75); /* lighter overlay */
+    z-index: -1;
+}
+
+
+/* Keep page content sharp over blurred background  */
+#content-wrapper {
+    backdrop-filter: blur(0);
+}
+/* Custom purple text */
+.text-purple {
+    color: purple !important;
+}
+

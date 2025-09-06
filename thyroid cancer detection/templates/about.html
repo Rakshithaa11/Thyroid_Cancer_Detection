@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}About - ThyroidAI{% endblock %}
+
+{% block content %}
+<section class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold text-primary">About ThyroidAI</h1>
+        <p class="lead mx-auto text-muted" style="max-width: 800px;">
+            ThyroidAI is an intelligent, AI-driven platform created to support early detection and proactive management of thyroid disorders.
+            It combines advanced machine learning models with clinical insights to help patients monitor their health and doctors make informed decisions. 
+            Designed for accessibility, our system ensures quick predictions, secure data access, and an intuitive dashboard experience.
+        </p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100 shadow-sm text-center">
+                <div class="card-body">
+                    <div class="display-5">🔐</div>
+                    <h5 class="card-title mt-3">Secure Access</h5>
+                    <p class="card-text">Role-based dashboards protect sensitive information and allow personalized access.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm text-center">
+                <div class="card-body">
+                    <div class="display-5">🧠</div>
+                    <h5 class="card-title mt-3">AI-Powered</h5>
+                    <p class="card-text">Advanced algorithms analyze symptoms and test results for fast, reliable predictions.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm text-center">
+                <div class="card-body">
+                    <div class="display-5">📊</div>
+                    <h5 class="card-title mt-3">Data Driven</h5>
+                    <p class="card-text">Generates predictions and useful trends for both doctors and patients to understand health over time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
